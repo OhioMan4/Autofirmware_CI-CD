@@ -12,7 +12,7 @@ int read_voltage(void){
 	return 3300+ rand()%200;
 }
 void publish_data(const char* device, int temp ,int volt){
-	printf("{\"device\":%s,\"temp\":%d,\"volt\":%d}\n",device, temp, volt);
+	printf("{\"device\":\"%s\",\"temp\":%d,\"volt\":%d}\n",device, temp, volt);
 }
 void firmware_run(void){
 	for(int i=0;i<10 ;i++){
